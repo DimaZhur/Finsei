@@ -1,0 +1,43 @@
+/* Фиксы для Swagger UI внутри Mintlify */
+.swagger-container .swagger-ui {
+    filter: invert(0.9) hue-rotate(180deg);
+}
+
+.swagger-container .swagger-ui .topbar {
+    display: none;
+}
+
+/* Стили для методов в чейнджлоге */
+main code[class*="POST"],
+main code[class*="GET"],
+main code[class*="DELETE"],
+main code[class*="PUT"],
+main code[class*="PATCH"] {
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid transparent;
+}
+
+main code.POST {
+    background-color: rgba(220, 38, 38, 0.1);
+    /* Красный фон */
+    color: #DC2626;
+    border-color: rgba(220, 38, 38, 0.2);
+}
+
+main code.GET {
+    background-color: rgba(37, 99, 235, 0.1);
+    /* Синий фон */
+    color: #2563EB;
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+main code.DELETE {
+    background-color: rgba(124, 58, 237, 0.1);
+    /* Фиолетовый фон */
+    color: #7C3AED;
+    border-color: rgba(124, 58, 237, 0.2);
+}

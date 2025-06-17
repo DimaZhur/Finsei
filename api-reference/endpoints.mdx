@@ -1,0 +1,20 @@
+---
+title: 'Endpoints & Methods'
+---
+import React from 'react';
+import SwaggerUI from "swagger-ui-react";
+import "swagger-ui-react/swagger-ui.css";
+
+function APIDocs() {
+  // Путь к вашему файлу в папке `static`.
+  // Этот URL будет доступен в браузере.
+  const specUrl = "/api/swagger.yaml";
+
+  return (
+    <div className="swagger-container">
+      <SwaggerUI url={specUrl} />
+    </div>
+  );
+}
+
+<APIDocs />
