@@ -1,0 +1,37 @@
+name: Deploy to GitHub Pages
+
+# Запускать сценарий при каждом пуше в основную ветку 'main'
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # Использовать виртуальную машину с Ubuntu
+    steps:
+      # 1. Скачиваем код из вашего репозитория
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Устанавливаем Node.js, чтобы можно было использовать npm
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      # 3. Устанавливаем Mintlify CLI глобально на виртуальной машине
+      - name: Install Mintlify CLI
+        run: npm i -g mintlify
+
+      # 4. Собираем статический сайт
+      # Эта команда создаст папку 'site' со всеми готовыми HTML/CSS/JS файлами
+      - name: Build website
+        run: mintlify build
+
+      # 5. Публикуем содержимое папки 'site' в ветку 'gh-pages'
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site # Название папки с готовым сайтом
