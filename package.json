@@ -1,16 +1,13 @@
 {
-  "name": "finsei-docs",
-  "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "mintlify dev",
-    "build": "mintlify build",
-    "start": "mintlify start"
+    "build": "next build && next export",
+    "start": "next start"
   },
   "dependencies": {
-    "mintlify": "^4.0.588",
+    "mintlify": "^3.0.0",
+    "next": "^14.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "swagger-ui-react": "^5.17.14"
+    "react-dom": "^18.2.0"
   }
 }

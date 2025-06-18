@@ -1,30 +1,29 @@
-{
-    "name": "Finsei Developer Portal",
-    "theme": "venus",
-    "css": [
-        "/css/custom.css"
-    ],
-    "favicon": "/favicon.ico",
-    "logo": {
-        "dark": "/logo/logo-dark.png",
-        "light": "/logo/logo-light.png"
+// mint.config.js
+module.exports = {
+    name: "Finsei Developer Portal",
+    theme: "venus",
+    css: ["/css/custom.css"],
+    favicon: "/favicon.ico",
+    logo: {
+        dark: "/logo/logo-dark.png",
+        light: "/logo/logo-light.png"
     },
-    "colors": {
-        "primary": "#16A34A",
-        "light": "#07C983",
-        "dark": "#15803D"
+    colors: {
+        primary: "#16A34A",
+        light: "#07C983",
+        dark: "#15803D"
     },
-    "navigation": [
+    navigation: [
         {
-            "group": "Introduction",
-            "pages": [
+            group: "Introduction",
+            pages: [
                 "introduction/what-is-finsei",
                 "introduction/who-is-this-for"
             ]
         },
         {
-            "group": "Core Concepts",
-            "pages": [
+            group: "Core Concepts",
+            pages: [
                 "core-concepts/wallets",
                 "core-concepts/cards",
                 "core-concepts/transactions",
@@ -32,8 +31,8 @@
             ]
         },
         {
-            "group": "Integration",
-            "pages": [
+            group: "Integration",
+            pages: [
                 "integration/get-sandbox-account",
                 "integration/create-jwt-token",
                 "integration/check-my-wallet",
@@ -49,13 +48,13 @@
             ]
         },
         {
-            "group": "API Reference",
-            "pages": [
+            group: "API Reference",
+            pages: [
                 "api-reference/base-url",
                 "api-reference/changelog",
                 "api-reference/endpoints"
             ]
         }
     ],
-    "root": "."
-}
+    root: "."
+};
