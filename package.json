@@ -1,12 +1,10 @@
 {
   "scripts": {
     "dev": "mintlify dev",
-    "build": "next build && next export",
-    "start": "next start"
-  },
-  "dependencies": {
-    "mintlify": "^3.0.0",
-    "next": "^14.0.0",
+    "build": "mintlify build"
+  }
+   "dependencies": {
+    "@mintlify/cli": "^4.0.587",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
